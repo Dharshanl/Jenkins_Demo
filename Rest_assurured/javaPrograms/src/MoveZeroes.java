@@ -1,6 +1,6 @@
-public class MoveZeroes {
+class MoveZeroes {
     public static void main(String[] args) {
-        int[] arr = {0, 1, 0, 3, 12};
+        int[] arr = {1,0, 1, 0, 3, 12};
 
         int index = 0; // Pointer to place the next non-zero element
 

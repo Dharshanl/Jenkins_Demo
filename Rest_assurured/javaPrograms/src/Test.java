@@ -89,13 +89,12 @@ class Test123{
     public static void removeDuplicatesV3(List<Integer> numbers){
         int pointer = 0;
         int temp;
-        for(int i = 1; i < numbers.size(); i++ ){
+        for(int i = 0; i < numbers.size(); i++ ){
             if (!numbers.get(i).equals(numbers.get(pointer))) {
+                pointer++;
                 temp = numbers.get(i);
                 numbers.add(i, numbers.get(pointer));
-                numbers.add(pointer, temp);
-                pointer = i;
-                pointer++;
+                numbers.add(pointer, temp);                
             }
         }
         System.out.println(pointer);
