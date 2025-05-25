@@ -5,7 +5,7 @@
     <classes>
       <class name="Testjava">
         <methods>
-          <include name="getJsonData"/>
+          <include name="getBooking"/>
         </methods>
       </class> <!-- Testjava -->
     </classes>

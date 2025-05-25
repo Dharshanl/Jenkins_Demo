@@ -1,8 +1,8 @@
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -13,11 +13,9 @@ public class Test {
 
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 2, 1, 2, 4, 5, 5, 6, 3, 12, 34, 5, 12};
-        Map<Integer, Integer> counter = new HashMap<>();
-        for (int n : a) {
-            if (counter.containsKey(n)) {
-                counter.put(n, counter.getOrDefault(n, 0) + 1);
-            }
+        Map<Integer, Integer> counter = new LinkedHashMap<>();
+        for (int n : a) {            
+                counter.put(n, counter.getOrDefault(n, 0) + 1);            
         }
         for (Entry<Integer, Integer> entry : counter.entrySet()) {
             System.out.println(String.format("The key %d is repeated: %d times", entry.getKey(), entry.getValue()));
