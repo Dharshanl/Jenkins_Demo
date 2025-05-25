@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -19,12 +20,14 @@ public class HashMapped {
 
 class Second extends HashMapped{
     public static void main(String[] args) {
-        String word = "mohammed ali junior";
+        String word = "dharshan lokesh";
         Map<Character, Integer> map = new LinkedHashMap<>();
+        Collections.reverseOrder();
+
         for(char c : word.toCharArray()){
                 map.put(c, map.getOrDefault(c, 0) + 1);
         }
-
+     
         for(Entry<Character, Integer> letter : map.entrySet()){
             if(letter.getValue() == 1){
                 System.out.println(String.format("This is the first found character: %c", letter.getKey()));
@@ -32,4 +35,6 @@ class Second extends HashMapped{
             }
         }
     }
+
+
 }
